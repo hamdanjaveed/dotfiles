@@ -1,0 +1,16 @@
+[user]
+	name = Hamdan Javeed
+	email = hamdan@hamdanjaveed.com
+[push]
+	default = current
+[alias]
+	graph = log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative
+[core]
+	pager = less
+[help]
+	autocorrect = 1
+[apply]
+	whitespace = fix
+[color]
+	ui = auto
+
