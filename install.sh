@@ -18,9 +18,9 @@ longestName=0
 for file in $HOME/.*; do
     name=${file#${hiddenFilePath}}
     if [ -f $rootpath$name ]; then
-	tempSize=${#name}
-	if [ $((tempSize)) -gt $((longestName)) ]; then
-	    longestName=$tempSize
+	    tempSize=${#name}
+	    if [ $((tempSize)) -gt $((longestName)) ]; then
+	        longestName=$tempSize
         fi
     fi
 done
