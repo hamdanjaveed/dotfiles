@@ -9,4 +9,5 @@ alias gd="git diff"
 alias gps="git push"
 alias gpl="git pull"
 alias gc="git commit -m"
+alias gb="git branch"
 
