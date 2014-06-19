@@ -3,6 +3,8 @@
 	email = hamdan@hamdanjaveed.com
 [push]
 	default = current
+[pull]
+	default = current
 [alias]
 	graph = log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative
 [core]
