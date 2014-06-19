@@ -6,7 +6,7 @@ export WHITE=$(tput setaf 0)
 export RESET=$(tput sgr0)
 export CYAN=$(tput setaf 006)
 
-export PS1="\n\[$RED\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \[$GREEN\]on \")\[$CYAN\]\$(parse_git_branch)\[$WHITE\] \[$CYAN\]\$ \[$RESET\]"
+export PS1="\n\[$RED\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \[$GREEN\]on \")\[$CYAN\]\$(parse_git_branch)\[$WHITE\] \[$GREEN\]\$ \[$RESET\]"
 
 export PS2="\[$ORANGE\]→ \[$RESET\]"
 
