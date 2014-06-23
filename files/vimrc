@@ -8,3 +8,4 @@ set expandtab
 set number
 set shiftwidth=4
 set expandtab
+set showmatch
