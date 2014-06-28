@@ -8,3 +8,7 @@ set number
 set shiftwidth=4
 set expandtab
 set showmatch
+set cul
+hi CursorLine term=none cterm=none ctermbg=235
+:highlight LineNr ctermfg=green
+
