@@ -60,5 +60,12 @@ done
 
 printf "Files linked\n\n"
 
+printf "Setting up preferences...\n\n"
+
+printf "Setting global gitignore file...\n"
+git config --global core.excludesfile ~/.gitignore_global
+
+printf "Preferences set\n\n"
+
 printf "... Finished"
 
