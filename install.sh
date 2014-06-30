@@ -1,18 +1,22 @@
 #!/bin/bash
+
 printf "Installing dotfiles...\n\n"
 
+# Define paths
 rootpath="$HOME/dotfiles/files/"
-
 oldFileDir="oldFiles"
 oldFilePath="$HOME/dotfiles/$oldFileDir"
 hiddenFilePath="$HOME/."
 
+# Make the old files directory if need be
 mkdir -p $oldFileDir
 
 # Clear old files
 for file in $oldFilePath; do
     rm -f file
 done
+
+### Format the output of the program so it looks a bit nicer
 
 # get the length of the longest file name
 longestName=0
@@ -57,3 +61,4 @@ done
 printf "Files linked\n\n"
 
 printf "... Finished"
+
