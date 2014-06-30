@@ -2,5 +2,5 @@
 .DS_Store
 
 ### Old dotfiles ###
-files_old/*
+oldFiles/*
 

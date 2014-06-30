@@ -2,10 +2,12 @@
 printf "Installing dotfiles...\n\n"
 
 rootpath="$HOME/dotfiles/files/"
-oldFilePath="$HOME/dotfiles/files_old"
+
+oldFileDir="oldFiles"
+oldFilePath="$HOME/dotfiles/$oldFileDir"
 hiddenFilePath="$HOME/."
 
-mkdir -p files_old
+mkdir -p $oldFileDir
 
 # Clear old files
 for file in $oldFilePath; do
