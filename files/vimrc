@@ -13,4 +13,6 @@ hi CursorLine term=none cterm=none ctermbg=235
 :highlight LineNr ctermfg=green
 set smarttab
 set scrolloff=5
+set showcmd
+set hidden
 
