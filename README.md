@@ -14,7 +14,7 @@ sh install.sh
 The script will make a backup of your existing dotfiles (that match the ones that it's setting up) in the
 
 ```
-~/dotfiles/files_old
+~/dotfiles/oldFiles
 ```
 
 directory, it then symlinks the new files.
