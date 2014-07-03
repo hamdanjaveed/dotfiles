@@ -13,4 +13,5 @@ alias gb="git branch"
 alias gplom="git pull origin master"
 alias gpom="git push origin master"
 alias gsl="git stash list"
+alias gca="git commit --amend"
 
