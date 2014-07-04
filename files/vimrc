@@ -16,3 +16,6 @@ set scrolloff=5
 set showcmd
 set hidden
 
+ca WQ wq
+ca Wq wq
+
