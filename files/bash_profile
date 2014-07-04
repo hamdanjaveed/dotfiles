@@ -15,4 +15,6 @@ alias gpom="git push origin master"
 alias gsl="git stash list"
 alias gca="git commit --amend"
 alias gch="git checkout"
+alias gr="git remote"
+alias gra="git remote add origin"
 
