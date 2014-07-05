@@ -80,5 +80,5 @@ git config --global color.ui true
 
 printf "Preferences set\n\n"
 
-printf "... Finished"
+printf "... Finished\n"
 
