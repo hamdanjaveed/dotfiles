@@ -123,6 +123,9 @@ chflags nohidden ~/Library
 # Dock and Dashboard #
 ######################
 
+# Set the icon size of Dock items to 36 pixels
+defaults write com.apple.dock tilesize -int 36
+
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
