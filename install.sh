@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 printf "Installing dotfiles...\n\n"
 
 # Define paths
@@ -78,7 +84,10 @@ git config --global core.excludesfile ~/.gitignore_global
 printf "Setting git color options...\n"
 git config --global color.ui true
 
+# Install OS X preferences
+sh files/osx.sh
+
 printf "Preferences set\n\n"
 
-printf "... Finished\n"
+printf "... Finished, a restart may be required"
 
