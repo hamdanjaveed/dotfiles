@@ -23,6 +23,12 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
+# Show the battery percentage in the menu bar
+defaults write com.apple.menuextra.battery ShowPercent -bool true
+
+# If an external monitor is connected, sleep when the lid is closed (ie. disable clamshell mode)
+sudo nvram boot-args=iog=0x0
+
 ##############################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories and input #
 ##############################################################
@@ -200,12 +206,6 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 ##########
 
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-############
-# Menu Bar #
-############
-
-defaults write com.apple.menuextra.battery ShowPercent -bool true
 
 ######################
 # Kill affected apps #
