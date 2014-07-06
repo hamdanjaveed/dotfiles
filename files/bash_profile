@@ -2,7 +2,7 @@ source ~/.bash_prompt
 source ~/.git-completion.bash
 
     #######
-#---# Git #----
+#---# Git #---#
     #######
 
 alias gs="git status"
@@ -28,8 +28,14 @@ alias grc="git rebase --continue"
 alias gcl="git clean -f"
 
     ########
-#---# Brew #----
+#---# Brew #---#
     ########
 
 alias bd="brew doctor"
 
+    ########
+#---# Misc #---#
+    ########
+
+alias m="make"
+alias mc="make && make clean"
