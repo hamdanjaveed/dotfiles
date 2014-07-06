@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Setting up OS X defaults...\n"
+printf "Setting OS X defaults...\n"
 
 # Taken from https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
