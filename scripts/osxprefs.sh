@@ -197,6 +197,12 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
+############
+# Menu Bar #
+############
+
+defaults write com.apple.menuextra.battery ShowPercent -bool true
+
 ######################
 # Kill affected apps #
 ######################
