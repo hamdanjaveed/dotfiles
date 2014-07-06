@@ -1,7 +1,5 @@
 #!/bin/bash
 
-printf "Installing dotfiles...\n\n"
-
 # Define paths
 rootpath="$HOME/dotfiles/files/"
 oldFileDir="oldFiles"
