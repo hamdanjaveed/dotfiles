@@ -90,9 +90,9 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Finder #
 ##########
 
-# Show icons for hard drives, servers, and removable media on the desktop
+# Show icons for servers, and removable media on the desktop, don't show hard drives
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
