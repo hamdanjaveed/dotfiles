@@ -117,6 +117,10 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+# Set the default window location to the home directory
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME"
+
 ######################
 # Dock and Dashboard #
 ######################
