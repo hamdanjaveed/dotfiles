@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Installing dotfiles...\n\n"
+printf "Installing dotfiles...\n"
 
 # Ask for root permissions
 sh scripts/askroot.sh

@@ -10,11 +10,9 @@ printf "Setting OS X defaults...\n"
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
 # Disable Resume system-wide
 #defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
@@ -152,9 +150,6 @@ defaults write com.apple.dock showhidden -bool true
 # Safari and WebKit #
 #####################
 
-# Set Safari’s home page to `about:blank` for faster loading
-defaults write com.apple.Safari HomePage -string "about:blank"
-
 # Hide Safari’s bookmarks bar by default
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
@@ -196,11 +191,17 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
-printf "Killing affected apps...\n"
+##########
+# iCloud #
+##########
+
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 ######################
 # Kill affected apps #
 ######################
+
+printf "Killing affected apps...\n"
 
 for app in Finder Dock Safari SystemUIServer; do
     killall "$app" > /dev/null 2>&1
