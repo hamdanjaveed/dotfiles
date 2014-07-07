@@ -207,6 +207,14 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
+############
+# Terminal #
+############
+
+# Set the default window theme to Pro
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+
 ######################
 # Kill affected apps #
 ######################
