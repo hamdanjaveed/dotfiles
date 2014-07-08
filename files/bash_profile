@@ -27,6 +27,7 @@ alias gra="git remote add origin"
 alias gr="git rebase -i"
 alias grc="git rebase --continue"
 alias gcl="git clean -f"
+alias grh="git reset HEAD"
 
     ########
 #---# Brew #---#
