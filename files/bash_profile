@@ -30,6 +30,11 @@ alias gcl="git clean -f"
 alias grh="git reset HEAD"
 alias gap="git add -p"
 
+__git_complete gb _git_branch
+__git_complete gch _git_checkout
+__git_complete gco _git_checkout
+__git_complete gck _git_checkout
+
     ########
 #---# Brew #---#
     ########
