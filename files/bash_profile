@@ -47,3 +47,4 @@ alias bd="brew doctor"
 alias m="make"
 alias mc="make && make clean"
 alias mr="make && ./myprogram"
+
