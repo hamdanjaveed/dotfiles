@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Setting git preferences...\n"
+printf "Setting git preferences..."
 rm -f $HOME/.gitconfig
 
 # Set name and email
@@ -15,4 +15,6 @@ git config --global core.excludesfile ~/.gitignore_global
 
 # Set color option
 git config --global color.ui true
+
+printf "Done\n"
 

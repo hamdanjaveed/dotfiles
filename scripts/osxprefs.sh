@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Setting OS X defaults...\n"
+printf "Setting OS X defaults..."
 
 # Taken from https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
@@ -213,12 +213,18 @@ defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
 ######################
+
+printf "Done\n"
+
+######################
 # Kill affected apps #
 ######################
 
-printf "Killing affected apps...\n"
+printf "Killing affected apps..."
 
 for app in Finder Dock Safari SystemUIServer; do
     killall "$app" > /dev/null 2>&1
 done
+
+printf "Done\n"
 
