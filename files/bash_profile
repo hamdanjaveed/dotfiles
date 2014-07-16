@@ -31,6 +31,7 @@ alias gap="git add -p"
 alias gcp="git cherry-pick"
 
 __git_complete gb _git_branch
+__git_complete gbm _git_branch
 __git_complete gch _git_checkout
 __git_complete gco _git_checkout
 __git_complete gck _git_checkout
