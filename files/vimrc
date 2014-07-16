@@ -18,6 +18,8 @@ set hidden
 
 ca WQ wq
 ca Wq wq
+ca W w
+ca Q q
 
 " Move lines up and down
 nnoremap <C-j> :m .+1<CR>==
