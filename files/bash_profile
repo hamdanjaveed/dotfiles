@@ -7,26 +7,34 @@ source ~/.git-completion.bash
 
 alias gs="git status"
 alias ga="git add -A"
+alias gap="git add -p"
 alias gl="git log"
+alias gcl="git clean -f"
+
 alias gd="git diff"
 alias gdc="git diff --cached"
-alias gps="git push"
-alias gpl="git pull"
+
 alias gc="git commit -m"
+alias gca="git commit --amend"
+
 alias gb="git branch"
 alias gbm="git branch -m"
+
 alias gplom="git pull origin master"
 alias gpom="git push origin master"
+
 alias gsl="git stash list"
-alias gca="git commit --amend"
+alias gss="git stash save"
+alias gsa="git stash apply"
+
 alias gch="git checkout"
 alias gco="git checkout"
 alias gck="git checkout"
-alias gri="git rebase -i"
-alias grc="git rebase --continue"
-alias gcl="git clean -f"
 alias grh="git reset HEAD"
-alias gap="git add -p"
+
+alias gri="git rebase -i HEAD~"
+alias grc="git rebase --continue"
+
 alias gcp="git cherry-pick"
 
 __git_complete gb _git_branch
