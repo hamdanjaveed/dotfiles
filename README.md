@@ -1,20 +1,21 @@
 #dotfiles
+My Terminal, Vim and OS X setup.
 
-My Terminal and (future) Vim setup.
-
-#Installation
-
-Clone this repo into your home directory and run the install.sh script
+##Installation
+Clone/download this repo into your home directory and run the install.sh script
 
 ```bash
 sh install.sh
 ```
 
+##Usage
+When you run the script, the script will make a backup of your existing dotfiles that are about to be replaced in ```~/dotfiles/oldFiles```, and then symlinks the new dot files that are stored in ``` ~/dotfiles/files ```.
 
-The script will make a backup of your existing dotfiles (that match the ones that it's setting up) in the
+##OS X Preferences
+By default, OS X preferences will not be set. To set them, use the ```-a``` flag with the script
 
+```bash
+sh install.sh -a
 ```
-~/dotfiles/oldFiles
-```
 
-directory, it then symlinks the new files.
+Doing this will kill all affected apps (except Terminal), and may require a restart.
