@@ -1,5 +1,6 @@
 source ~/.bash_prompt
 source ~/.git-completion.bash
+export PATH=/usr/local/bin:$PATH
 
     #######
 #---# Git #---#
