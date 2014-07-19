@@ -29,6 +29,9 @@ else
     printf "\nSkipping OS X preferences (to set preferences, use the -a flag)\n"
 fi
 
+# Check and install brew
+sh scripts/brew.sh
+
 printf "\n... Finished"
 
 if [ "$installOSXPrefs" = true ];
