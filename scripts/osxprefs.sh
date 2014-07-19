@@ -15,10 +15,7 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
 # Disable Resume system-wide
-#defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
-
-# Check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
@@ -202,6 +199,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # iCloud #
 ##########
 
+# Save files locally by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 ############
@@ -227,4 +225,3 @@ for app in Finder Dock Safari SystemUIServer; do
 done
 
 printf "Done\n"
-
