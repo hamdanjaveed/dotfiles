@@ -23,4 +23,3 @@ if [[ $brewList != *google-chrome* ]]; then brew cask install google-chrome; fi
 if [[ $brewList != *minecraft* ]];     then brew cask install minecraft;     fi
 if [[ $brewList != *sublime-text* ]];  then brew cask install sublime-text;  fi
 if [[ $brewList != *font-source-code-pro* ]]; then brew cask install font-source-code-pro; fi
-
