@@ -5,7 +5,7 @@ My Terminal, Vim and OS X setup.
 Clone/download this repo into your home directory and run the install.sh script
 
 ```bash
-sh install.sh
+./install.sh
 ```
 
 ##Usage
@@ -15,7 +15,7 @@ When you run the script, the script will make a backup of your existing dotfiles
 By default, OS X preferences will not be set. To set them, use the ```-a``` flag
 
 ```bash
-sh install.sh -a
+./install.sh -a
 ```
 
 Doing this will kill all affected apps (except Terminal), and may require a restart.
