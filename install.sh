@@ -4,12 +4,12 @@ printf "Installing dotfiles...\n"
 
 installOSXPrefs=false
 
-if [[ $# -ne 0 ]] && [[ "$1" = "-a" ]];
+if [ $# -ne 0 ] && [[ "$1" = "-a" ]];
 then
     installOSXPrefs=true
 fi
 
-if [ "$installOSXPrefs"=true ];
+if [ "$installOSXPrefs" = true ];
 then
     # Ask for root permissions
     sh scripts/askroot.sh
