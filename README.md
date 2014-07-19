@@ -19,3 +19,6 @@ By default, OS X preferences will not be set. To set them, use the ```-a``` flag
 ```
 
 Doing this will kill all affected apps (except Terminal), and may require a restart.
+
+##Homebrew
+The script will install Homebrew if needed, along with a bunch of packages and applications that I use. Check scripts/brew-packages.sh to see what will get installed.
