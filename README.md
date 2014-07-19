@@ -9,6 +9,7 @@ Clone/download this repo into your home directory and run the install.sh script
 ```
 
 ##Usage
+Note: this script requires bash 4
 When you run the script, the script will make a backup of your existing dotfiles that are about to be replaced in ```~/dotfiles/oldFiles```, and then symlinks the new dot files that are stored in ``` ~/dotfiles/files ```.
 
 ##OS X Preferences
