@@ -68,6 +68,7 @@ else
         hideErrors
         brew tap caskroom/cask
         brew tap homebrew/versions
+        brew tap caskroom/fonts
         showErrors
         printf "Done\n"
 
