@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# A newline for formatting
+printf "\n"
+
 # Define paths
 rootpath="$HOME/dotfiles/files/"
 oldFileDir="oldFiles"
