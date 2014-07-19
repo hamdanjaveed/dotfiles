@@ -51,7 +51,7 @@ else
     hideOutput; brewDoctor=`brew doctor`; showOutput;
     if [[ "$brewDoctor" != "Your system is ready to brew." ]];
     then
-        printf "Warning!\nbrew doctor says:\n%s\n" "$brewDoctor"
+        printf "\n%s\n" "$brewDoctor"
     else
         printf "System is healthy\n"
         printf "Running brew update..."
@@ -60,17 +60,16 @@ else
         then
             printf "Homebrew is up to date\n"
         else
-            printf "Homebrew updated:\n%s" "$brewUpdate"
+            printf "Homebrew updated:\n%s\n" "$brewUpdate"
         fi
 
         # Update taps
-        printf "Updating taps..."
+        printf "Updating taps...\n"
         hideErrors
         brew tap caskroom/cask
         brew tap homebrew/versions
         brew tap caskroom/fonts
         showErrors
-        printf "Done\n"
 
         # Install missing homebrew packages
         sh scripts/brew-packages.sh
