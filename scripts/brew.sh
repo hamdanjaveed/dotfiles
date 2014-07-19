@@ -72,6 +72,7 @@ else
         showErrors
 
         # Install missing homebrew packages
-        sh scripts/brew-packages.sh
+        chmod +x ./scripts/brew-packages.sh
+        ./scripts/brew-packages.sh
     fi
 fi
