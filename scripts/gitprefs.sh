@@ -17,4 +17,3 @@ git config --global core.excludesfile ~/.gitignore_global
 git config --global color.ui true
 
 printf "Done\n"
-
