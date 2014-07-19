@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Setting git preferences..."
+printf "\nSetting git preferences..."
 rm -f $HOME/.gitconfig
 
 # Set name and email

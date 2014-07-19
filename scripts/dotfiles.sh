@@ -56,4 +56,4 @@ for file in $rootpath*; do
     printf "Done\n"
 done
 
-printf "Files linked\n\n"
+printf "Files linked\n"

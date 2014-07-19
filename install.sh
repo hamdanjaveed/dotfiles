@@ -4,7 +4,7 @@ printf "Installing dotfiles...\n"
 
 installOSXPrefs=false
 
-if [ "$#" -ne 0 ] && [ "$1" = "-a" ];
+if [[ $# -ne 0 ]] && [[ "$1" = "-a" ]];
 then
     installOSXPrefs=true
 fi
@@ -26,7 +26,7 @@ then
     # Install OS X preferences
     sh scripts/osxprefs.sh
 else
-    printf "Skipping OS X preferences (to set preferences, use the -a flag)\n"
+    printf "\nSkipping OS X preferences (to set preferences, use the -a flag)\n"
 fi
 
 printf "\n... Finished"
