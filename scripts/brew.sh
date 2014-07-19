@@ -76,4 +76,3 @@ else
         sh scripts/brew-packages.sh
     fi
 fi
-
