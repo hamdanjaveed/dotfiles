@@ -63,6 +63,36 @@ defaults write NSGlobalDomain AppleLocale -string "en_CA@currency=CAD"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
+##############
+# SSD Tweaks #
+##############
+
+# Disable local Time Machine snapshots
+sudo tmutil disablelocal
+
+# Disable hibernation (speeds up entering sleep mode)
+sudo pmset -a hibernatemode 0
+
+# Remove the sleep image file to save disk space
+sudo rm /Private/var/vm/sleepimage
+# Create a zero-byte file instead…
+sudo touch /Private/var/vm/sleepimage
+# …and make sure it can’t be rewritten
+sudo chflags uchg /Private/var/vm/sleepimage
+
+# Disable the sudden motion sensor as it’s not useful for SSDs
+sudo pmset -a sms 0
+
+##################
+# Energy Timings #
+##################
+
+# Set the sleep timer to 10 minutes
+sudo pmset sleep 10
+
+# Set the display sleep timer to 10 minutes
+sudo pmset displaysleep 10
+
 ##########
 # Screen #
 ##########
@@ -178,6 +208,9 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
+# Disable local Time Machine backups
+hash tmutil &> /dev/null && sudo tmutil disablelocal
+
 ####################
 # Activity Monitor #
 ####################
@@ -220,7 +253,7 @@ printf "Done\n"
 
 printf "Killing affected apps..."
 
-for app in Finder Dock Safari SystemUIServer; do
+for app in "Activity Monitor" "Finder" "cfprefsd" "Dock" "Safari" "SystemUIServer"; do
     killall "$app" > /dev/null 2>&1
 done
 
