@@ -49,6 +49,7 @@ __git_complete gck _git_checkout
     ########
 
 alias bd="brew doctor"
+alias bu="brew update"
 
     ########
 #---# Misc #---#
