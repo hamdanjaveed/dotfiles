@@ -20,6 +20,7 @@ alias gca="git commit --amend"
 
 alias gb="git branch"
 alias gbm="git branch -m"
+alias gbnm="git branch --no-merged"
 
 alias gp="git push"
 alias gplom="git pull origin master"
