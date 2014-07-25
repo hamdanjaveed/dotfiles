@@ -35,6 +35,7 @@ alias gco="git checkout"
 alias gck="git checkout"
 alias grh="git reset HEAD"
 
+alias gr="git rebase"
 alias gri="git rebase -i HEAD~"
 alias grc="git rebase --continue"
 alias gfo="git fetch origin"
