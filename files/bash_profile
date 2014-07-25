@@ -37,6 +37,7 @@ alias grh="git reset HEAD"
 
 alias gri="git rebase -i HEAD~"
 alias grc="git rebase --continue"
+alias gfo="git fetch origin"
 
 alias gcp="git cherry-pick"
 
