@@ -66,8 +66,9 @@ else
         # Update taps
         printf "Updating taps...\n"
         hideErrors
-        brew tap caskroom/cask
         brew tap homebrew/versions
+        brew tap caskroom/cask
+        brew tap caskroom/versions
         brew tap caskroom/fonts
         showErrors
 
