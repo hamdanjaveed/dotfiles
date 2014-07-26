@@ -16,4 +16,7 @@ git config --global core.excludesfile ~/.gitignore_global
 # Set color option
 git config --global color.ui true
 
+# Set push pref
+git config --global push.default simple
+
 printf "Done\n"
