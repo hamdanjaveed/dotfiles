@@ -16,7 +16,7 @@ done
 # Cask
 brewList=$(brew cask list)
 
-declare -a caskApps=("brackets" "google-chrome" "minecraft" "sublime-text" "font-source-code-pro")
+declare -a caskApps=("brackets" "google-chrome" "minecraft" "sublime-text3" "font-source-code-pro")
 
 for app in "${caskApps[@]}"; do
     if [[ $brewList != *$app* ]]; then
