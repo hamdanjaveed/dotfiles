@@ -51,6 +51,7 @@ __git_complete gbd _git_branch
 __git_complete gch _git_checkout
 __git_complete gco _git_checkout
 __git_complete gck _git_checkout
+__git_complete gr _git_rebase
 
     ########
 #---# Brew #---#
