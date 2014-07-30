@@ -20,6 +20,7 @@ alias gca="git commit --amend"
 
 alias gb="git branch"
 alias gbm="git branch -m"
+alias gbd="git branch -d"
 alias gbmg="git branch --merged"
 alias gbnm="git branch --no-merged"
 
@@ -46,6 +47,7 @@ alias gcp="git cherry-pick"
 
 __git_complete gb _git_branch
 __git_complete gbm _git_branch
+__git_complete gbd _git_branch
 __git_complete gch _git_checkout
 __git_complete gco _git_checkout
 __git_complete gck _git_checkout
