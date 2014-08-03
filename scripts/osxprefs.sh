@@ -23,6 +23,9 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.
 # Show the battery percentage in the menu bar
 defaults write com.apple.menuextra.battery ShowPercent -bool true
 
+# Display time with seconds and show the date
+defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d h:mm:ss a"
+
 # If an external monitor is connected, sleep when the lid is closed (ie. disable clamshell mode)
 sudo nvram boot-args=iog=0x0
 
