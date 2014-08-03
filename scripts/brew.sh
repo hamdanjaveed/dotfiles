@@ -10,12 +10,52 @@ showOutput() {
 }
 
 hideErrors() {
-    exec 4<&2
+    exec 5<&2
     exec 2>/dev/null
 }
 
 showErrors() {
-    exec 2<&4
+    exec 2<&5
+}
+
+hideAll() {
+    hideOutput; hideErrors;
+}
+
+showAll() {
+    showOutput; showErrors;
+}
+
+closeFileDescriptors() {
+    exec 4>&- 5>&-
+}
+
+updateBrew() {
+    printf "Running brew update..."
+    hideOutput; brewUpdate=`brew update`; showOutput;
+    if [[ "$brewUpdate" == "Already up-to-date." ]];
+    then
+        printf "Homebrew is up to date\n"
+    else
+        printf "Homebrew updated\n"
+    fi
+}
+
+continueAfterUpdates() {
+    # Update taps
+    printf "Updating taps...\n"
+    hideErrors
+    brew tap homebrew/versions
+    brew tap caskroom/cask
+    brew tap caskroom/versions
+    brew tap caskroom/fonts
+    showErrors
+
+    closeFileDescriptors
+
+    # Install missing homebrew packages
+    chmod +x ./scripts/brew-packages.sh
+    ./scripts/brew-packages.sh
 }
 
 # Check if brew is installed
@@ -48,32 +88,28 @@ then
 else
     printf "Running brew doctor..."
 
-    hideOutput; brewDoctor=`brew doctor`; showOutput;
+    hideAll; brewDoctor=`brew doctor 2>&1`; showAll;
     if [[ "$brewDoctor" != "Your system is ready to brew." ]];
     then
-        printf "\n%s\n" "$brewDoctor"
+        printf "System is sick!\n"
+        if [[ "$brewDoctor" =~ "Your Homebrew is outdated" ]];
+        then
+            updateBrew
+            printf "Running brew doctor..."
+            hideAll; brewDoctor=`brew doctor 2>&1`; showAll;
+            if [[ "$brewDoctor" != "Your system is ready to brew." ]];
+            then
+                printf "System is still sick!\nYou should run brew doctor and resolve any issues.\n"
+            else
+                printf "System is healthy\n"
+                continueAfterUpdates
+            fi
+        else
+            printf "You should run brew doctor and resolve any issues.\n"
+        fi
     else
         printf "System is healthy\n"
-        printf "Running brew update..."
-        hideOutput; brewUpdate=`brew update`; showOutput;
-        if [[ "$brewUpdate" == "Already up-to-date." ]];
-        then
-            printf "Homebrew is up to date\n"
-        else
-            printf "Homebrew updated:\n%s\n" "$brewUpdate"
-        fi
-
-        # Update taps
-        printf "Updating taps...\n"
-        hideErrors
-        brew tap homebrew/versions
-        brew tap caskroom/cask
-        brew tap caskroom/versions
-        brew tap caskroom/fonts
-        showErrors
-
-        # Install missing homebrew packages
-        chmod +x ./scripts/brew-packages.sh
-        ./scripts/brew-packages.sh
+        updateBrew
+        continueAfterUpdates
     fi
 fi
