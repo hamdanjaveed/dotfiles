@@ -81,13 +81,13 @@ sudo pmset -a sms 0
 ##################
 
 # Set the disk sleep timer to 10 minutes
-sudo pmset disksleep 10
+sudo pmset -a disksleep 10
 
 # Set the sleep timer to 10 minutes
-sudo pmset sleep 10
+sudo pmset -a sleep 10
 
-# Set the display sleep timer to 10 minutes
-sudo pmset displaysleep 10
+# Set the display sleep timer to 9 minutes
+sudo pmset -a displaysleep 9
 
 ##########
 # Screen #
