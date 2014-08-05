@@ -36,6 +36,7 @@ alias gsa="git stash apply"
 alias gch="git checkout"
 alias gco="git checkout"
 alias gck="git checkout"
+alias gnb="git checkout -b"
 alias grh="git reset HEAD"
 
 alias gr="git rebase"
