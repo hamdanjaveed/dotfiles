@@ -58,8 +58,10 @@ xcuserdata
 DerivedData
 *.xcuserstate
 
-#######
-# Vim #
-#######
+#########
+# Other #
+#########
 *.swp
+.sass-cache
+.sass-cache/*
 
