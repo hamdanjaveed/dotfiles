@@ -33,7 +33,17 @@ alias gpom="git push origin master"
 alias gsl="git stash list"
 alias gss="git stash save"
 alias gsa="git stash apply"
-alias gsd="git stash drop"
+gsd() {
+    # convert args to array
+    if [[ $# -eq 0 ]]; then args=(0); else args=("$@"); fi
+    # order args based on integer value
+    stashes=($(printf '%s\n' "${args[@]}"|sort -n))
+
+    # drop stashes in reverse order
+    for ((i = ${#stashes[@]} - 1; i >= 0; i--)); do
+        git stash drop stash@{${stashes[${i}]}}
+    done
+}
 
 alias gch="git checkout"
 alias gco="git checkout"
