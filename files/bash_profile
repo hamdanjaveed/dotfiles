@@ -9,7 +9,7 @@ export PATH=/usr/local/bin:$PATH
 alias gs="git status"
 alias ga="git add -A"
 alias gap="git add -p"
-alias gl="git log"
+gl() { if [[ $# -eq 0 ]]; then git log; else git log -$1; fi }
 alias gcl="git clean -f"
 
 alias gd="git diff"
