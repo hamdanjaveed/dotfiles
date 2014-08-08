@@ -63,7 +63,7 @@ __git_complete gr _git_rebase
 
 alias bd="brew doctor"
 alias bu="brew update"
-alias bg="brew upgrade"
+alias bup="brew upgrade"
 
     ########
 #---# Misc #---#
