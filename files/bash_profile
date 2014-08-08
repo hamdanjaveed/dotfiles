@@ -59,6 +59,8 @@ alias gfo="git fetch origin"
 alias gcp="git cherry-pick"
 alias gcpc="git cherry-pick --continue"
 
+alias gsh="git show"
+
 __git_complete gb _git_branch
 __git_complete gbm _git_branch
 __git_complete gbd _git_branch
