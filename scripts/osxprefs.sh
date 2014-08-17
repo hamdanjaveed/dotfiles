@@ -80,10 +80,10 @@ sudo pmset -a sms 0
 # Energy #
 ##########
 
-# Disable disksleep, set sleep timer to 15 minutes, set displaysleep to 10
-sudo pmset -a sleep 15
-sudo pmset -a disksleep 12
-sudo pmset -a displaysleep 10
+# Set sleep times to something in the 20s
+sudo pmset -a sleep 25
+sudo pmset -a disksleep 22
+sudo pmset -a displaysleep 20
 
 ##########
 # Screen #
