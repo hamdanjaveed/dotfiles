@@ -76,18 +76,14 @@ sudo tmutil disablelocal
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
 
-##################
-# Energy Timings #
-##################
+##########
+# Energy #
+##########
 
-# Set the disk sleep timer to 10 minutes
-sudo pmset -a disksleep 10
-
-# Set the sleep timer to 10 minutes
-sudo pmset -a sleep 10
-
-# Set the display sleep timer to 9 minutes
-sudo pmset -a displaysleep 9
+# Disable disksleep, set sleep timer to 15 minutes, set displaysleep to 10
+sudo pmset -a sleep 15
+sudo pmset -a disksleep 12
+sudo pmset -a displaysleep 10
 
 ##########
 # Screen #
@@ -130,11 +126,6 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
 # Remove the spring loading delay for directories
 defaults write NSGlobalDomain com.apple.springing.delay -float 0
-
-# Enable snap-to-grid for icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
@@ -197,16 +188,6 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
-################
-# Time Machine #
-################
-
-# Prevent Time Machine from prompting to use new hard drives as backup volume
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
-# Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
-
 ####################
 # Activity Monitor #
 ####################
@@ -223,13 +204,6 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # Sort Activity Monitor results by CPU usage
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
-
-##########
-# iCloud #
-##########
-
-# Save files locally by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 ############
 # Terminal #
