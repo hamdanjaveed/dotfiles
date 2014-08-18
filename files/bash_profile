@@ -32,7 +32,7 @@ alias gpom="git push origin master"
 
 alias gsl="git stash list"
 alias gss="git stash save"
-alias gsa="git stash apply"
+gsa() { if [[ $# -eq 0 ]]; then git stash apply; else git stash apply stash@{$1}; fi }
 gsd() {
     # convert args to array
     if [[ $# -eq 0 ]]; then args=(0); else args=("$@"); fi
