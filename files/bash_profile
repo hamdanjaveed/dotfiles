@@ -25,6 +25,9 @@ alias gbD="git branch -D"
 alias gbmg="git branch --merged"
 alias gbnm="git branch --no-merged"
 
+alias gm="git merge"
+alias gma="git merge --abort"
+
 alias gp="git push"
 alias gpl="git pull"
 alias gplom="git pull origin master"
@@ -65,9 +68,12 @@ __git_complete gb _git_branch
 __git_complete gbm _git_branch
 __git_complete gbd _git_branch
 __git_complete gbD _git_branch
+__git_complete gm _git_branch
+
 __git_complete gch _git_checkout
 __git_complete gco _git_checkout
 __git_complete gck _git_checkout
+
 __git_complete gr _git_rebase
 
     ########
