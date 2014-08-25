@@ -4,13 +4,11 @@ printf "Installing dotfiles...\n"
 
 installOSXPrefs=false
 
-if [ $# -ne 0 ] && [[ "$1" = "-a" ]];
-then
+if [ $# -ne 0 ] && [[ "$1" = "-a" ]]; then
     installOSXPrefs=true
 fi
 
-if [ "$installOSXPrefs" = true ];
-then
+if [ "$installOSXPrefs" = true ]; then
     # Ask for root permissions
     ./scripts/askroot.sh
 fi
@@ -21,8 +19,7 @@ fi
 # Set up git preferences
 ./scripts/gitprefs.sh
 
-if [ "$installOSXPrefs" = true ];
-then
+if [ "$installOSXPrefs" = true ]; then
     # Install OS X preferences
     ./scripts/osxprefs.sh
 else
@@ -34,8 +31,7 @@ fi
 
 printf "\n... Finished"
 
-if [ "$installOSXPrefs" = true ];
-then
+if [ "$installOSXPrefs" = true ]; then
     printf ", a restart may be required"
 fi
 
