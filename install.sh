@@ -12,25 +12,25 @@ fi
 if [ "$installOSXPrefs" = true ];
 then
     # Ask for root permissions
-    sh scripts/askroot.sh
+    ./scripts/askroot.sh
 fi
 
 # Install dotfiles
-sh scripts/dotfiles.sh
+./scripts/dotfiles.sh
 
 # Set up git preferences
-sh scripts/gitprefs.sh
+./scripts/gitprefs.sh
 
 if [ "$installOSXPrefs" = true ];
 then
     # Install OS X preferences
-    sh scripts/osxprefs.sh
+    ./scripts/osxprefs.sh
 else
     printf "\nSkipping OS X preferences (to set preferences, use the -a flag)\n"
 fi
 
 # Check and install brew
-sh scripts/brew.sh
+./scripts/brew.sh
 
 printf "\n... Finished"
 
