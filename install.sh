@@ -8,10 +8,8 @@ if [ $# -ne 0 ] && [[ "$1" = "-a" ]]; then
     installOSXPrefs=true
 fi
 
-if [ "$installOSXPrefs" = true ]; then
-    # Ask for root permissions
-    ./scripts/askroot.sh
-fi
+# Ask for root permissions
+./scripts/askroot.sh
 
 # Install dotfiles
 ./scripts/dotfiles.sh
