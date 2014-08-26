@@ -19,4 +19,7 @@ git config --global color.ui true
 # Set push pref
 git config --global push.default simple
 
+# Set git template directory (used for hooks etc.)
+git config --global init.templatedir "~/.git_templates"
+
 printf "Done\n"
