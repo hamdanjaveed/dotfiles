@@ -36,6 +36,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 """ Colors
 syntax enable
+set t_Co=256
 colorscheme wombat256mod
 hi Normal ctermbg=NONE
 hi CursorLine term=none cterm=none ctermbg=232
