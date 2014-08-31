@@ -1,5 +1,6 @@
 """ General
 set autoindent
+set smartindent
 filetype plugin indent on
 
 set smarttab
