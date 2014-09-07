@@ -41,3 +41,19 @@ colorscheme wombat256mod
 hi Normal ctermbg=NONE
 hi CursorLine term=none cterm=none ctermbg=232
 
+set backspace=indent,eol,start
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
+
+
+filetype plugin indent on
+
