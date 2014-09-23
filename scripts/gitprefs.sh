@@ -17,7 +17,7 @@ git config --global core.excludesfile ~/.gitignore_global
 git config --global color.ui true
 
 # Set push pref
-git config --global push.default simple
+git config --global push.default current
 
 # Set git template directory (used for hooks etc.)
 git config --global init.templatedir "~/.git_templates"
