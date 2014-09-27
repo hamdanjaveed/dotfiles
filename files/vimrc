@@ -1,3 +1,34 @@
+""" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim' " Vundle
+Plugin 'tpope/vim-fugitive' " Git thing
+Plugin 'scrooloose/nerdtree' " Tree thing
+Plugin 'scrooloose/syntastic' " Syntax checking
+Plugin 'terryma/vim-multiple-cursors' " Sorta like Sublime's multiple cursors
+Plugin 'bling/vim-airline' " Status bar
+Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Toggle between relative and normal line numbers
+Plugin 'ervandew/supertab' " Tab completion
+
+call vundle#end()
+filetype plugin indent on
+
+""" Plugin Customization
+let g:airline_theme='dark'
+set laststatus=2 " Show airline all the time
+set timeoutlen=50 " Speed up leaving insert mode
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.branch = '⎇'
+
 """ General
 set autoindent
 set smartindent
@@ -10,6 +41,7 @@ set expandtab
 set shiftwidth=4
 set expandtab
 
+"set relativenumber
 set number
 set showmatch
 set cul
@@ -40,19 +72,7 @@ set t_Co=256
 colorscheme wombat256mod
 hi Normal ctermbg=NONE
 hi CursorLine term=none cterm=none ctermbg=232
+highlight LineNr ctermfg=grey
 
 set backspace=indent,eol,start
-
-"set nocompatible
-"filetype off
-
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-
-"Plugin 'gmarik/Vundle.vim'
-"Plugin 'Valloric/YouCompleteMe'
-
-"call vundle#end()
-
-"filetype plugin indent on
 
