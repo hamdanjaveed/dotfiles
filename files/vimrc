@@ -65,11 +65,11 @@ inoremap <C-k> <ESC>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-""" On save
-" Strip strailing whitespace
+""" On save, strip strailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
-" Format
-autocmd BufWritePost *.c execute '!astyle' shellescape(expand('%'), 1)
+
+""" Format in normal mode with C-f
+nnoremap <C-f> BufWritePost *.c,*.cpp,*.cc execute '!astyle' shellescape(expand('%'), 1)
 
 """ Colors
 syntax enable
