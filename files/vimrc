@@ -13,6 +13,7 @@ Plugin 'bling/vim-airline' " Status bar
 Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Toggle between relative and normal line numbers
 Plugin 'ervandew/supertab' " Tab completion
 Plugin 'Raimondi/delimitMate' " Auto close quotes, parens etc.
+Plugin 'Chiel92/vim-autoformat' " Auto format
 
 call vundle#end()
 filetype plugin indent on
