@@ -12,6 +12,7 @@ Plugin 'terryma/vim-multiple-cursors' " Sorta like Sublime's multiple cursors
 Plugin 'bling/vim-airline' " Status bar
 Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Toggle between relative and normal line numbers
 Plugin 'ervandew/supertab' " Tab completion
+Plugin 'Raimondi/delimitMate' " Auto close quotes, parens etc.
 
 call vundle#end()
 filetype plugin indent on
