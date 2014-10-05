@@ -43,8 +43,7 @@ set expandtab
 set shiftwidth=4
 set expandtab
 
-"set relativenumber
-set number
+set relativenumber
 set showmatch
 set cul
 set scrolloff=5
@@ -57,19 +56,15 @@ ca Wq wq
 ca W w
 ca Q q
 
-""" Move lines up and down with C-j/k
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <ESC>:m .+1<CR>==gi
-inoremap <C-k> <ESC>:m .-2<CR>==gi
+""" Autoformat with C-f
+nnoremap <C-f> :%!astyle --style=java --indent=spaces=4 --indent-preprocessor --break-blocks --pad-oper --pad-header --convert-tabs --align-pointer=name --align-reference=name --keep-one-line-statements --pad-method-colon=none<CR>
+
+""" Move lines up and down with C-j/k in visual mode
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 """ On save, strip strailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
-
-""" Format in normal mode with C-f
-nnoremap <C-f> BufWritePost *.c,*.cpp,*.cc execute '!astyle' shellescape(expand('%'), 1)
 
 """ Colors
 syntax enable
@@ -79,5 +74,5 @@ hi Normal ctermbg=NONE
 hi CursorLine term=none cterm=none ctermbg=232
 highlight LineNr ctermfg=grey
 
-set backspace=indent,eol,start
+set backspace=indent,eol,start " I forgot what this was for"
 
