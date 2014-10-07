@@ -57,7 +57,7 @@ ca W w
 ca Q q
 
 """ Autoformat with C-f
-nnoremap <C-f> :%!astyle --style=java --indent=spaces=4 --indent-preprocessor --break-blocks --pad-oper --pad-header --convert-tabs --align-pointer=name --align-reference=name --keep-one-line-statements --pad-method-colon=none<CR>
+nnoremap <C-f> :%!astyle --style=java --indent=spaces=4 --indent-preprocessor --break-blocks --pad-oper --pad-header --convert-tabs --align-pointer=name --align-reference=name --keep-one-line-statements --pad-method-colon=none --indent-switches<CR>
 
 """ Move lines up and down with C-j/k in visual mode
 vnoremap <C-j> :m '>+1<CR>gv=gv
