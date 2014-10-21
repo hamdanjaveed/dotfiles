@@ -63,6 +63,10 @@ nnoremap <C-f> :%!astyle --style=java --indent=spaces=4 --indent-preprocessor --
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+""" Have panes open to the bottom and right
+set splitbelow
+set splitright
+
 """ On save, strip strailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
