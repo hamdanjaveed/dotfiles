@@ -29,6 +29,9 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d h:mm:ss a
 # If an external monitor is connected, sleep when the lid is closed (ie. disable clamshell mode)
 sudo nvram boot-args=iog=0x0
 
+# Toggle Yosemite's dark mode
+sudo defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true
+
 ##############################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories and input #
 ##############################################################
