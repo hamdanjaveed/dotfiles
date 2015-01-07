@@ -17,9 +17,6 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 # Disable Resume system-wide
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
-# Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-
 # Show the battery percentage in the menu bar
 defaults write com.apple.menuextra.battery ShowPercent -bool true
 
