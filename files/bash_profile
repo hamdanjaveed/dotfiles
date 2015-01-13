@@ -70,6 +70,9 @@ alias gsh="git show"
 alias gt="git tag"
 alias gta="git tag -a"
 
+alias gls="git log --graph --all --decorate --simplify-by-decoration"
+alias glg="git log --graph --all --decorate --simplify-by-decoration"
+
 __git_complete gb _git_branch
 __git_complete gbm _git_branch
 __git_complete gbd _git_branch
