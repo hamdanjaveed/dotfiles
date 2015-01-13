@@ -90,6 +90,13 @@ alias bd="brew doctor"
 alias bu="brew update"
 alias bup="brew upgrade"
 
+    ############
+#---# Terminal #---#
+    ############
+alias l="ls"
+alias sl="ls"
+alias lsl="ls -1"
+
     ########
 #---# Misc #---#
     ########
