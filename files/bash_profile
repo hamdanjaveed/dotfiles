@@ -60,7 +60,9 @@ alias grs="git reset --soft"
 alias gr="git rebase"
 alias gri="git rebase -i HEAD~"
 alias grc="git rebase --continue"
+
 alias gfo="git fetch origin"
+alias gru="git remote update origin --prune"
 
 alias gcp="git cherry-pick"
 alias gcpc="git cherry-pick --continue"
