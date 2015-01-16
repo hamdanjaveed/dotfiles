@@ -28,7 +28,7 @@ alias gbnm="git branch --no-merged"
 alias gm="git merge"
 alias gma="git merge --abort"
 
-alias gp="git push"
+alias gps="git push"
 alias gpl="git pull"
 alias gplom="git pull origin master"
 alias gpom="git push origin master"
