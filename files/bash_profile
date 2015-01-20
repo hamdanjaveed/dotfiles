@@ -56,6 +56,8 @@ alias gcb="git checkout -b"
 alias grH="git reset HEAD"
 alias grh="git reset --hard"
 alias grs="git reset --soft"
+alias grh1="git reset --hard HEAD~1"
+alias grs1="git reset --soft HEAD~1"
 
 alias gr="git rebase"
 alias gri="git rebase -i HEAD~"
