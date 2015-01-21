@@ -104,6 +104,7 @@ alias bup="brew upgrade"
 alias l="ls"
 alias sl="ls"
 alias lsl="ls -1"
+alias lsa="ls -a"
 
     ########
 #---# Misc #---#
