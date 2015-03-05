@@ -115,3 +115,6 @@ alias m="make"
 alias mc="make && make clean"
 alias mr="make && ./myprogram"
 
+
+export NVM_DIR="/Users/hamdanjaveed/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
