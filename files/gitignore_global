@@ -83,6 +83,11 @@ sysinfo.txt
 #######
 backstop.json
 
+########
+# Node #
+########
+node_modules/*
+
 #########
 # Other #
 #########
