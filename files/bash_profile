@@ -108,6 +108,12 @@ alias lsl="ls -1"
 alias lsa="ls -a"
 alias lsll="ls -al"
 
+    ################
+#---# Applications #---#
+    ################
+alias love="~/Applications/love.app/Contents/MacOS/love"
+alias chromeallow="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files"
+
     ########
 #---# Misc #---#
     ########
@@ -119,3 +125,5 @@ alias mr="make && ./myprogram"
 
 export NVM_DIR="/Users/hamdanjaveed/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export EDITOR=vim
