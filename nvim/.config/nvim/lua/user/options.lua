@@ -31,9 +31,9 @@ local options = {
   timeoutlen = 100,                        -- Time to wait for a mapped sequence to complete.
   undofile = true,                         -- Save undo state in a file.
   updatetime = 300,                        -- Time after which a buffer is written to its swap file if there's no activity.
-  whichwrap = "<,>,[,],h,l",               -- Allow these characters that usually move the cursor left/right to move to the next/previous line also.
+  whichwrap = "<,>,[,],h,l",               
   wrap = false,                            -- No text wrapping.
-  writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+  writebackup = true,                      -- Create a backup file before overwriting a file.
 }
 
 vim.opt.shortmess:append "c"
@@ -42,6 +42,5 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
---vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.cmd "set whichwrap+=<,>,[,],h,l"       -- Allow these characters that usually move the cursor left/right to move to the next/previous line also.
 vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
