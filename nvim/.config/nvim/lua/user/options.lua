@@ -28,10 +28,10 @@ local options = {
   splitright = true,                       -- Always split right.
   swapfile = false,                        -- Never create a swap file.
   tabstop = 2,                             -- How many spaces in a tab.
+  termguicolors = true,                    -- Show lots of colors.
   timeoutlen = 100,                        -- Time to wait for a mapped sequence to complete.
   undofile = true,                         -- Save undo state in a file.
   updatetime = 300,                        -- Time after which a buffer is written to its swap file if there's no activity.
-  whichwrap = "<,>,[,],h,l",               
   wrap = false,                            -- No text wrapping.
   writebackup = true,                      -- Create a backup file before overwriting a file.
 }
