@@ -1,6 +1,33 @@
+[branch]
+	autosetupmerge = true
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	pager = less -F -X
+[diff]
+	renames = true
+	indentHeuristic = on
+[merge]
+	summary = true
+	conflictstyle = diff3
+[pager]
+	branch = false
+[pull]
+	rebase = true
+[push]
+	config = default
+	default = current
+[rebase]
+	autosquash = true
+	autostash = true
+[rerere]
+	enabled = 1
+[status]
+	showUntrackedFiles = all
 [user]
 	name = Hamdan Javeed
 	email = hamdan@hamdanjaveed.com
-[pager]
-	branch = false
 
