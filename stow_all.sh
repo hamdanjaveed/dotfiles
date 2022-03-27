@@ -19,17 +19,23 @@ stow ${ARGS[@]} bash
 stow ${ARGS[@]} nvim
 
 # Multiple workspaces.
+work="block"
+function stowWork() {
+  cd $1 && stow ${ARGS[@]} $work && cd ..
+}
 
-function stowBlockOrPersonal() {
-  local work="block"
+function stowWorkOrPersonal() {
   if [ -d "$1/$work" ];
   then
-    cd $1 && stow ${ARGS[@]} $work && cd ..
+    stowWork $1
   else
     stow ${ARGS[@]} $1
   fi
 }
 
-stowBlockOrPersonal "git"
-stowBlockOrPersonal "zsh"
+stowWorkOrPersonal "git"
+stowWorkOrPersonal "zsh"
+
+# Work.
+stowWork "mysql"
 
