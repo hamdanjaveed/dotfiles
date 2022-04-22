@@ -6,6 +6,7 @@
 	interactive = auto
 	status = auto
 [core]
+	excludesFile = ~/.gitignore_global
 	pager = less -F -X
 [diff]
 	renames = true
